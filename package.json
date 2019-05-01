@@ -1,0 +1,22 @@
+{
+    "name": "typescript",
+    "devDependencies": {
+        "@types/node": "latest",
+        "@types/node-fetch": "^2.3.3",
+        "@types/shelljs": "^0.8.5",
+        "aws-auth-helper": "^1.0.0",
+        "ts-node": "^8.1.0"
+    },
+    "dependencies": {
+        "@pulumi/cloud": "^0.18.0",
+        "@pulumi/cloud-aws": "^0.18.0",
+        "@pulumi/pulumi": "latest",
+        "node-fetch": "^2.4.1",
+        "shelljs": "^0.8.3"
+    },
+    "scripts": {
+        "deploy": "eval \"`aws-auth-helper` pulumi up\"",
+        "destroy": "eval \"`aws-auth-helper` pulumi destroy\"",
+        "test": "ts-node scripts/test.ts"
+    }
+}
